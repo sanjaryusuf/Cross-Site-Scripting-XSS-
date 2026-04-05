@@ -1,0 +1,156 @@
+XSS
+│
+├── 1. FUNDAMENTALS (Core Understanding)
+│   ├── XSS nima? (client-side code injection)
+│   ├── Browser parsing modeli
+│   ├── HTML parser vs JS engine
+│   ├── Same-Origin Policy (SOP)
+│   ├── Trust boundary (user → server → browser)
+│   └── Sink & Source tushunchasi
+│
+├── 2. XSS TYPES (Classification)
+│   ├── Reflected XSS
+│   ├── Stored XSS
+│   ├── DOM-based XSS
+│   ├── Blind XSS
+│   ├── Self-XSS (low value, lekin tushunish kerak)
+│   └── Mutation-based XSS (mXSS)
+│
+├── 3. CONTEXT ANALYSIS (Most Critical Skill)
+│   ├── HTML Context
+│   │   ├── Tag ichida
+│   │   └── Tagdan chiqish (break-out)
+│   │
+│   ├── Attribute Context
+│   │   ├── Double quote (" ")
+│   │   ├── Single quote (' ')
+│   │   ├── Unquoted
+│   │   └── Event handler (onerror, onclick)
+│   │
+│   ├── JavaScript Context
+│   │   ├── String (" ' `)
+│   │   ├── JS variable
+│   │   ├── Inline script
+│   │   └── JSON context
+│   │
+│   ├── URL Context
+│   │   ├── href
+│   │   ├── src
+│   │   └── javascript: scheme
+│   │
+│   └── CSS Context
+│       ├── style attribute
+│       └── expression() (legacy)
+│
+├── 4. PAYLOAD ENGINEERING
+│   ├── Basic Payloads
+│   │   ├── <script>alert(1)</script>
+│   │   └── minimal payloadlar
+│   │
+│   ├── Event-based Payloads
+│   │   ├── onerror
+│   │   ├── onload
+│   │   └── onfocus / onclick
+│   │
+│   ├── Tag-based Payloads
+│   │   ├── img
+│   │   ├── svg
+│   │   ├── iframe
+│   │   └── input / form
+│   │
+│   ├── JS-based Payloads
+│   │   ├── eval()
+│   │   ├── setTimeout()
+│   │   └── Function()
+│   │
+│   ├── Polyglot Payloads
+│   │   └── Multi-context ishlaydigan payloadlar
+│   │
+│   └── Minimal/Stealth Payloads
+│       ├── alert o‘rniga boshqa function
+│       └── obfuscation
+│
+├── 5. FILTER & WAF BYPASS
+│   ├── Case manipulation
+│   ├── Encoding
+│   │   ├── URL encoding
+│   │   ├── HTML entity
+│   │   └── Unicode
+│   │
+│   ├── Keyword bypass
+│   │   ├── script filter bypass
+│   │   └── alert bypass
+│   │
+│   ├── Tag obfuscation
+│   ├── Attribute breaking
+│   ├── Null byte / control chars
+│   └── CSP bypass (advanced)
+│
+├── 6. DOM XSS (Deep Dive)
+│   ├── Sources
+│   │   ├── location.href
+│   │   ├── location.hash
+│   │   ├── document.URL
+│   │   └── postMessage
+│   │
+│   ├── Sinks
+│   │   ├── innerHTML
+│   │   ├── document.write
+│   │   ├── eval
+│   │   └── setTimeout(string)
+│   │
+│   ├── DOM flow tracking
+│   └── Client-side debugging (DevTools)
+│
+├── 7. ADVANCED EXPLOITATION
+│   ├── Cookie stealing
+│   ├── Session hijacking
+│   ├── Keylogging
+│   ├── CSRF chaining
+│   ├── Phishing injection
+│   ├── Defacement
+│   └── Account takeover (ATO)
+│
+├── 8. SPECIAL VECTORS
+│   ├── SVG-based XSS
+│   ├── Markdown XSS
+│   ├── JSON XSS
+│   ├── Angular / React XSS
+│   ├── Template Injection → XSS
+│   └── File upload → XSS
+│
+├── 9. BUG HUNTING METHODOLOGY
+│   ├── Recon
+│   │   ├── URL discovery
+│   │   ├── Parameter mining
+│   │   └── Endpoint mapping
+│   │
+│   ├── Reflection testing
+│   ├── Context detection
+│   ├── Payload testing
+│   ├── Filter analysis
+│   ├── Bypass crafting
+│   └── Exploitation
+│
+├── 10. AUTOMATION & TOOLS
+│   ├── Burp Suite
+│   ├── Dalfox
+│   ├── XSStrike
+│   ├── ffuf (param fuzzing)
+│   ├── gau / waybackurls
+│   └── custom scripts
+│
+├── 11. DEFENSE (Opposite thinking)
+│   ├── Output encoding
+│   ├── Input validation
+│   ├── CSP (Content Security Policy)
+│   ├── HttpOnly cookies
+│   ├── Secure frameworks
+│   └── Sanitization libraries
+│
+└── 12. REAL-WORLD MASTERY
+    ├── Bug bounty hunting
+    ├── Real targets analysis
+    ├── Write-ups o‘qish
+    ├── Payload evolution
+    └── Personal payload arsenal
