@@ -1,5 +1,5 @@
 <script>alert(1)</script> 
-→ Eng oddiy XSS trigger, JS ishlayotganini tekshiradi
+→ Eng oddiy XSS trigger, JS ishlayotganini tekshiradi → Eng oddiy XSS trigger, JS ishlayotganini tekshiradi
 
 <script>alert('XSS')</script> 
 → String bilan alert, filter bypass testlarda ishlatiladi
